@@ -14,9 +14,9 @@ This tool is intended for educational and research purposes only. It should not 
 
 2. **Navigate to the Directory:**
 
-```bash
-cd backdoorgenerator
-```
+   ```bash
+   cd backdoorgenerator
+   ```
 
 3. **Run the script:**
    ```bash
