@@ -1,21 +1,28 @@
 # Backdoor Generator
 
-A simple script to create a Metasploit backdoor on Kali Linux for penetration testing and ethical hacking purposes.
+**Overview**
 
-**Disclaimer**: This tool should only be used in legal and authorized environments. Unauthorized use is illegal and unethical.
+This tool is designed to help security professionals and ethical hackers understand backdoor techniques and improve their detection capabilities. It simulates various backdoor scenarios to provide hands-on experience.
 
-## Installation
+**Disclaimer**
 
-To install the Backdoor Generator, follow these steps:
+This tool is intended for educational and research purposes only. It should not be used for malicious activities. Always obtain proper authorization before conducting any security testing.
 
-### Clone the Repository
+**Installation**
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/zypersploit/backdoorgenerator.git
+   ```
+
+2. **Navigate to the Directory:**
 
 ```bash
-git clone https://github.com/zypersploit/backdoorgenerator.git
 cd backdoorgenerator
 ```
 
-### Then run the file
-```bash
-bash run.sh
-```
+3. **Run the script:**
+   ```bash
+   bash run.sh
+   ```
