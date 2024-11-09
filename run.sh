@@ -3,7 +3,7 @@
 clear
 
 echo -e "\033[33mRunning setup and backdoor creation...\033[0m"
-echo -e "\033[34mCreated by zypersploit or most known as barryjensen-dev\033[0m"
+echo -e "\033[34mCreated by zypersploit!\033[0m"
 echo
 
 check_command() {
