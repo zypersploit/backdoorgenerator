@@ -1,9 +1,5 @@
 # Backdoor Generator
 
-**Overview**
-
-This tool is designed to help security professionals and ethical hackers understand backdoor techniques and improve their detection capabilities. It simulates various backdoor scenarios to provide hands-on experience.
-
 **Disclaimer**
 
 This tool is intended for educational and research purposes only. It should not be used for malicious activities. Always obtain proper authorization before conducting any security testing.
