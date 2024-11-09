@@ -12,20 +12,17 @@
 
 ## Installation
 
-1. #### Clone the Repository:
-
-   ```bash
-   git clone https://github.com/zypersploit/backdoorgenerator.git
-   ```
+### Clone the Repository
+```
+git clone https://github.com/zypersploit/backdoorgenerator.git
+ ```
    
-2. #### Navigate to the Directory
+### Navigate to the Directory
+```
+cd backdoorgenerator
+```
 
-   ```bash
-   cd backdoorgenerator
-   ```
-
-3. #### Run the script:
-
-   ```bash
-   bash run.sh
-   ```
+### Run the script
+```
+bash run.sh
+```
