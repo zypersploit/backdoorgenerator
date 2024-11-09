@@ -2,7 +2,7 @@
 
 **Disclaimer**
 
-This tool is intended for educational and research purposes only. It should not be used for malicious activities. Always obtain proper authorization before conducting any security testing.
+This tool is intended for educational purposes only. It should not be used for malicious activities. Always obtain proper authorization before conducting any security testing.
 
 **Installation**
 
