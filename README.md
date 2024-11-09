@@ -6,7 +6,7 @@
 
 ## **Disclaimer:**
 
-- This tool is for educational and research purposes only.
+- This tool is for educational purposes only.
 - Unauthorized use of backdoors is illegal and unethical.
 - Always get written permission before running penetration testing tools on any system.
 
