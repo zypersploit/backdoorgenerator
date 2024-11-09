@@ -12,7 +12,7 @@
 
 ## Installation
 
-- [ ] \(https://www.kali.org/) Kali Linux
+- [ ] \(Kali Linux)
 
 ### Clone the Repository
 ```
