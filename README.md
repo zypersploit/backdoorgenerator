@@ -10,6 +10,8 @@
 - Unauthorized use of backdoors is illegal and unethical.
 - Always get written permission before running penetration testing tools on any system.
 
+## Usage
+[USAGE](USAGE.md)
 ## Installation
 
 ### Clone the Repository
