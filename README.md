@@ -8,7 +8,7 @@ A simple script to create a Metasploit backdoor on Kali Linux for penetration te
 
 To install the Backdoor Generator, follow these steps:
 
-### Cloning the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/zypersploit/backdoorgenerator.git
