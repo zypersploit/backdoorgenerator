@@ -4,13 +4,13 @@
 
  Makes backdoor generation faster by automating that process.
 
-## **Disclaimer:**
+## **Disclaimer**
 
 - This tool is for educational purposes only.
 - Unauthorized use of backdoors is illegal and unethical.
 - Always get written permission before running penetration testing tools on any system.
 
-## **Installation Steps:**
+## **Installation**
 
 1. **Clone the Repository:**
 
