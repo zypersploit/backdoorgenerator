@@ -11,4 +11,4 @@ Here's a hypothetical example of how you might modify the script for educational
 * Modify the script to generate payloads for different operating systems (for educational comparison).
 * Use the script to understand the structure of backdoors (for educational analysis).
 
-**Disclaimer:** This script is provided for educational purposes only.  The authors are not responsible for any misuse of this script.
+**Disclaimer:** This script is provided for educational purposes only.  The authors are not responsible for any misuse of this script
