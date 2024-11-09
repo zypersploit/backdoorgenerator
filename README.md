@@ -12,6 +12,8 @@
 
 ## Installation
 
+- [ ] \(https://www.kali.org/) Kali Linux
+
 ### Clone the Repository
 ```
 git clone https://github.com/zypersploit/backdoorgenerator.git
